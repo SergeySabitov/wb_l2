@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай число</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="image-container">
+        <img src="shreck1-PhotoRoom.png-PhotoRoom.png" alt="" id="shreckImage">
+        <img src="shreck2-PhotoRoom.png-PhotoRoom.png" alt="" id="shreckImage2" style="display: none">
+    </div>
+    <div class="shreckMessage" id="shreckMessage">
+        
+    </div>
+    <div class="controls">
+        <div>
+            <input type="number" id="guessInput" min="1" max="100">
+            <button id="guessButton">Попробовать</button>
+        </div>
+        <div>
+            <button class="settings" id="openModal">Настройки</button>
+            <button id="resetButton">Начать заново</button>
+            
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Выберите диапазон чисел</h2>
+            <input type="number" id="minRangeInput" placeholder="Минимальное значение">
+            <input type="number" id="maxRangeInput" placeholder="Максимальное значение">
+            <button id="applyRange">Применить</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+    <div class="user-account">
+        <img class="user-photo" src="https://www.meme-arsenal.com/memes/b89e96150a56cac9976c7485aada589d.jpg" alt="User Photo">
+        <div class="user-details">
+            <h1 class="user-title">Ленивый кот</h1>
+            <p class="user-info"><span>Количество потребленных каллорий за сегодня: </span> <span><span id="calories-consumed">0</span> ккал</span></p>
+            <p class="user-info"><span>Ежедневная цель по калориям: </span><span><span id="daily-calorie-goal">2000</span> ккал</span></p>
+            <label class="user-label" for="new-calorie-goal">Установите новую ежедневную цель:</label>
+            <input class="user-input" type="number" id="new-calorie-goal">
+            <button class="user-button" id="set-goal-button">Установить</button>
+        </div>
+    </div>
+    <div class="today-products-container">
+        <div class="today-products-header"> 
+            <div class="section-name">
+                <span>Съел сегодня</span>
+                <span class="filter" id="filterByName">имя &#9650;</span>
+                <span class="filter" id="filterByCalories">ккал &#9650;</span>
+            </div>
+            <button id="openModalBtn">+ Добавить</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeModal">&times;</span>
+                    <div class="tabs">
+                        <div class="active" id="addNewProductTab">Добавить новый продукт</div>
+                        <div id="addDietProductTab">Добавить продукт из рациона</div>
+                    </div>
+                    <div class="newProductContainer" id="tab1">
+                        
+                        <h2>Введите информацию о продукте</h2>
+                        <input type="text" id="productName" placeholder="Название">
+                        <input type="number" id="productWeight" placeholder="Вес (г)">
+                        <input type="number" id="productCalories" placeholder="Калории (ккал/100г)">
+                    </div>
+                    <div class="productFromDietContainer" id="tab2" style="display: none;">
+                        <div class="custom-select">
+                            <div class="select-selected">Select an option</div>
+                            <select>
+                            </select>
+                            <div class="select-items">
+                            </div>
+                        </div>
+                        <input id="dietProductWeight" type="number" placeholder="Вес (г)">
+                    </div>
+                    
+                    
+                    <button id="addProductBtn" class="addButton">Добавить</button>
+                </div>
+            </div>
+        </div>
+        <div class="today-products" id="todayProducts"></div>
+    </div>
+    <div class="chart-container">
+    </div>
+    <div class="diet-products-container">
+        <div class="diet-products-header">
+            <div class="section-name">Мой рацион</div> 
+            <button id="openDietModalBtn">+ Добавить</button>
+            <div id="myDietModal" class="modal">
+                <div class="modal-content ">
+                    <span class="close" id="closeDietModal">&times;</span>
+                    <h2>Введите информацию о продукте</h2>
+                    <input type="text" id="dietProductName" placeholder="Название">
+                    <input type="number" id="dietProductCalories" placeholder="Калории (ккал/100г)">
+                    <button id="addDietProductBtn" class="addButton">Добавить</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="today-products" id="dietProducts"></div>
+    </div>
+</div>
+</body>
+<script src="../node_modules/chart.js/dist/chart.umd.js"></script>
+<script src="./js/main.js"></script>
+</html>

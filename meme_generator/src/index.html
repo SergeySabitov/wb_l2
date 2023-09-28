@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="file" id="imageInput" accept="img" class="fileInput">
+        <input type="text" id="textFieldText" placeholder="literally me" class="textFieldInput"/>
+        <button id="addTextField" class="addTextField">Add Text Field</button>
+    </div>
+    <div class="imageContainer noImgProvide" id="imageContainer">
+        <img id="uploadedImage" alt="Uploaded Image" class="uploadedImage">
+    </div>
+    <div id="controls" class="controls">
+        <div class="inputContainer">  
+            <label for="fontSize">Font Size:</label>
+            <input type="range" id="fontSize" min="10" max="48" step="1" value="26" disabled>
+        </div>
+        <div class="inputContainer">  
+        <label for="fontColor">Font Color:</label>
+        <input type="color" id="fontColor" value="#ffffff" disabled>
+    </div>
+        <div class="inputContainer">  
+        <label for="fontWeight">Font Weight:</label>
+        <select id="fontWeight" disabled>
+            <option value="normal">Normal</option>
+            <option value="bold" selected>Bold</option>
+        </select>
+    </div>
+    </div>
+    <div class="memeControls">
+        <button id="clearAll" disabled>Очистить</button>
+        <button id="save" disabled>Сгенерировать мем</button>
+    </div>
+    <div class="note">Скачать полученный мем вы можете снизу, нажав по изображению правой кнопкой мышки и выбрав сохранить</div>
+    <canvas id="myCanvas" style="border:2px solid black;" width="600" height="400"></canvas>
+</body>
+<script src="./js/main.js"></script>
+</html>

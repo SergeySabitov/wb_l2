@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+}
+.x-to-move {
+background: linear-gradient(to right, #cd0000, rgb(248, 213, 213), white,white);
+}
+
+.o-to-move {
+    background: linear-gradient(to left, #0074cd, rgb(188, 218, 248), white,white);
+}
+.both {
+    background: linear-gradient(to left, #0074cd, rgb(188, 218, 248),rgb(248, 213, 213), #cd0000 );
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 20px auto;
+    width: 320px;
+}
+
+.cell {
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.121)
+}
+.winner {
+    background-color: rgba(0, 123, 255, 0.353);
+}
+
+.message {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.restart-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    background-color: #45a049;
+}

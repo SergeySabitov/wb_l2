@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background-image: url('back.jpg');
+    background-size: cover; /* Растянуть изображение на весь экран */
+    background-position: center; /* Позиционировать изображение по центру */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+
+.shreckMessage {
+    background-color: white;
+    width: 500px;
+    border-radius: 30px;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 25px;
+    font-size: 20px;
+    text-align: left;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* Синий цвет для кнопок */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 0 6px 0 rgb(0 0 0 / 35%)
+}
+
+button:hover {
+    background-color: #1284ff; /* Цвет кнопки при наведении курсора */
+}
+
+.image-container {
+    position:absolute;
+    right: 10%;
+    top: 20%;
+
+}
+.image-container img {
+    height: 600px;
+}
+
+.controls {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* Стили для контейнера модального окна */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    border-radius: 12px;
+}
+
+/* Закрыть кнопку модального окна */
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Стили для кнопки "Применить" */
+#applyRange {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Стили для текстовых полей в модальном окне */
+.modal-content input[type="number"] {
+    padding: 5px;
+    font-size: 16px;
+    margin: 5px;
+}

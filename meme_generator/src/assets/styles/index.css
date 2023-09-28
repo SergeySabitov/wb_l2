@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.uploadedImage {
+    width: 600px;
+    height: auto;
+    display: none;
+}
+
+.imageContainer {
+    position: relative;
+    width: 600px;
+}
+.imageContainer.noImgProvide {
+    width: 600px;
+    height: 400px;
+
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%239A9A9AFF' stroke-width='9' stroke-dasharray='14%2c 25' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+} 
+
+
+.textBlock {
+    position: absolute;
+    top:0;
+    left: 0;
+    cursor: move;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    /* border: 1px dashed #000; */
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    padding: 5px;
+    /* user-drag: none; */
+    user-select: none;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: sans-serif;
+    max-width: 400px;
+    text-align: center;
+}
+
+.textBlock.active {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 15px
+}
+
+.textFieldInput, .fileInput {
+    margin: 15px;
+    font-size: 16px;
+    line-height: 30px;
+
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.memeControls {
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+
+}
+button {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(34, 33, 39);
+    color: rgb(212, 211, 218);
+    box-shadow: 0 1px 5px 0px rgb(183 183 183)
+}
+button:disabled {
+    opacity: 0.6
+}
+
+#myCanvas {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.note {
+    width: 600px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px
+}

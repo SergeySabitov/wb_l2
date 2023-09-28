@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 30px;
+    background-color: rgb(245,245,245);
+    font-family: sans-serif;
+    
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+.custom-select {
+    position: relative;
+    width: 200px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.custom-select .select-selected {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-select .select-selected:hover {
+    background-color: #f1f1f1;
+}
+
+.custom-select .select-selected:after {
+    content: '';
+    border: 6px solid transparent;
+    border-top: 6px solid #333;
+    position: absolute;
+    right: 10px;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.custom-select .select-items {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.custom-select .select-items div {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.custom-select .select-items div:hover {
+    background-color: #f1f1f1;
+}
+
+
+.user-account {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.user-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-details {
+    flex: 1;
+}
+
+.user-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.user-info {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 500px
+}
+
+.user-label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.user-input {
+    width: 100px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+user-button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+user-button:hover {
+    background-color: #0056b3;
+}
+
+
+.today-products-container {
+    margin-bottom: 20px;
+}
+.today-products-header, .diet-products-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    align-items: end;
+}
+
+.section-name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.section-name .filter {
+    font-size: 14px;
+    color: rgb(24, 24, 24);
+    background-color: #eaedf1;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.section-name .filter.active {
+    background-color: #2b6cb1;
+    color: white
+}
+.section-name .filter.active:hover {
+    background-color: #3a87da;
+}
+.section-name .filter:hover {
+    background-color: #dfefff;
+}
+button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #3472b4;
+    color: rgba(255, 255, 255, 0.875);
+    border: 0;
+    border-radius: 5px;
+}
+
+.product {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0 0 3px 1px rgb(193, 193, 193);
+    padding: 15px;
+    margin-top: 20px;
+    position: relative
+}
+
+.productName {
+    margin: 10px
+}
+
+.productInfo {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px
+}
+
+.deleteIcon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 30px;
+
+}
+
+.tabs div {
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #7d9ab93b;
+    width: 45%;
+    text-align: center;
+}
+
+.tabs div.active {
+    color: white;
+    background-color: #0057b3cd;
+}
+.tabs div:hover {
+    background-color: #4b6e933b;
+    cursor: pointer;
+}
+.tabs div.active:hover {
+    background-color: #0d63bf;
+}
+
+.modal-content input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.addButton {
+    margin-top: 20px;
+    font-size: 18px;
+    width: 200px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.productFromDietContainer {
+    margin: 15px 0
+}
+
+.productFromDietContainer .custom-select {
+    display: inline-block;
+    margin-right: 10px;
+}
